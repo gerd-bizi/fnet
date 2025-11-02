@@ -1,0 +1,17 @@
+{
+    "dataset": "fnet.data.czidataset.CziDataset",
+    "dataset_kwargs": {
+        "path_csv": "/home/gbizi/rotation_2/pytorch_fnet/data/csvs/alpha_tubulin/test.csv",
+        "transform_signal": ["fnet.transforms.norm_around_center"], "transform_target": ["fnet.transforms.norm_around_center"]
+    },
+    "gpu_ids": 0,
+    "idx_sel": null,
+    "metric": "fnet.metrics.corr_coef",
+    "n_images": -1,
+    "no_prediction": false,
+    "no_signal": false,
+    "no_target": false,
+    "path_model_dir": ["/home/gbizi/rotation_2/pytorch_fnet"],
+    "path_save_dir": "/home/gbizi/rotation_2/pytorch_fnet/test_predictions",
+    "path_tif": null
+}

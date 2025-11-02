@@ -1,0 +1,39 @@
+{
+    "batch_size": 28,
+    "bpds_kwargs": {
+        "buffer_size": 16,
+        "buffer_switch_interval": 2800,
+        "patch_shape": [
+            32,
+            64,
+            64
+        ]
+    },
+
+    "dataset_train": "fnet.data.czidataset.CziDataset",
+    "dataset_train_kwargs": {
+    "path_csv": "/home/gbizi/rotation_2/pytorch_fnet/data/csvs/alpha_tubulin/train_local.csv",
+    "transform_signal": ["fnet.transforms.norm_around_center"],
+    "transform_target": ["fnet.transforms.norm_around_center"]
+    },
+    "dataset_val": null,
+    "dataset_val_kwargs": {},
+    "fnet_model_class": "fnet.fnet_model.Model",
+    "fnet_model_kwargs": {
+        "betas": [
+            0.5,
+            0.999
+        ],
+        "criterion_class": "fnet.losses.WeightedMSE",
+        "init_weights": false,
+        "lr": 0.001,
+        "nn_class": "fnet.nn_modules.fnet_nn_3d.Net",
+        "scheduler": null
+    },
+    "interval_checkpoint": 500,
+    "interval_save": 100,
+    "iter_checkpoint": [],
+    "n_iter": 50000,
+    "path_save_dir": ".",
+    "seed": null
+}

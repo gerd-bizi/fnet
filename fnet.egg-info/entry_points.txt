@@ -1,0 +1,2 @@
+[console_scripts]
+fnet = fnet.cli.main:main
